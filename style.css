@@ -45,9 +45,9 @@ header {
 }
 
 .search-bar input {
-  padding: 15px 0 15px 50px;
+  padding: 13px 0 13px 50px;
   border: none;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 25px;
   width: 350px;
   outline: none;
@@ -358,14 +358,14 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 10px;
   color: #6c6c6c;
 }
 
 .second-details-post p {
   background-color: #f8f8f8;
   padding: 5px;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .job-posting h2 {
@@ -484,8 +484,8 @@ header {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 50px;
+  height: 25px;
 }
 .switch input {
   opacity: 0;
@@ -507,10 +507,10 @@ header {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 22px;
+  width: 22px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -521,9 +521,9 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
 }
 
 /* Rounded sliders */
@@ -567,6 +567,11 @@ input:checked + .slider:before {
   .job-details {
     margin-bottom: 20px;
   }
+  .second-details-post p {
+    background-color: #f8f8f8;
+    padding: 0px;
+    margin: 0;
+  }
 }
 
 /* Small Devices (Mobile, 576px and below) */
@@ -584,6 +589,12 @@ input:checked + .slider:before {
   .second-details-post {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .second-details-post p {
+    background-color: #f8f8f8;
+    padding: 0px;
+    margin: 0;
   }
 
   .content-heart {
@@ -622,6 +633,12 @@ input:checked + .slider:before {
     flex-direction: row;
   }
 
+  .second-details-post p {
+    background-color: #f8f8f8;
+    padding: 0px;
+    margin: 0;
+  }
+
   .main-content {
     margin-bottom: 20px;
   }
@@ -643,13 +660,13 @@ input:checked + .slider:before {
   #menu-toggle-button {
     display: none;
   }
-  .menu {
+  .menu-responsive {
     display: none;
   }
 }
 
 @media (max-width: 767px) {
-  .menu {
+  .menu-responsive {
     position: fixed;
     top: 0;
     left: -250px;
@@ -659,9 +676,9 @@ input:checked + .slider:before {
     color: #333;
     transition: left 0.3s ease;
     padding: 20px;
+    z-index: 10000;
   }
-
-  .menu.show {
+  .menu-responsive.show {
     left: 0;
   }
 
